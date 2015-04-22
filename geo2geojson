@@ -1,0 +1,24 @@
+#!/usr/bin/perl
+
+# cat grand-unified.list.sort3 | /data2/data/github/geotools/cleanse | /data2/data/github/geotools/plot-motion 2>/dev/null | ./geo2geojson | /data2/data/github/tippecanoe/tippecanoe -pf -pl -z13 -r1.5 -f -o geotaggers.mbtiles
+
+# cat grand-unified.list.sort3.geojson | /data2/data/github/tippecanoe/tippecanoe -pf -pl -po -z13 -r1.5 -f -o geotaggers1.5pflo.mbtiles
+
+while (<>) {
+	chomp;
+
+	($when, $a, $to, $b, $date, $time, $sec, $dist, $speed) = split(/ /);
+
+	($lat1, $lon1) = split(/,/, $a);
+	($lat2, $lon2) = split(/,/, $b);
+
+	next if $sec > 10 * 60;
+	next if $speed > 85;
+
+	$dist = int($dist);
+	$speed = int($speed);
+
+	if ($dist > 0 && $dist < 15000) {
+		print "{ \"type\": \"Feature\", \"properties\": { \"dist\": $dist, \"speed\": $speed }, \"geometry\": { \"type\": \"LineString\", \"coordinates\": [ [ $lon1,$lat1 ], [ $lon2,$lat2 ]] } }\n"
+	}
+}
