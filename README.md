@@ -1,7 +1,7 @@
 geotaggers
 ----------
 
-Map style for the Geotaggers' World Atlas
+Map style for the [Geotaggers' World Atlas](https://www.mapbox.com/blog/geotaggers-world-atlas/)
 
 What's going on
 ---------------
