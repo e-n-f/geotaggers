@@ -1,8 +1,6 @@
 #!/usr/bin/perl
 
-# cat grand-unified.list.sort3 | /data2/data/github/geotools/cleanse | /data2/data/github/geotools/plot-motion 2>/dev/null | ./geo2geojson | /data2/data/github/tippecanoe/tippecanoe -pf -pl -z13 -r1.5 -f -o geotaggers.mbtiles
-
-# cat grand-unified.list.sort3.geojson | /data2/data/github/tippecanoe/tippecanoe -pf -pl -po -z13 -r1.5 -f -o geotaggers1.5pflo.mbtiles
+# cat grand-unified.list.sort3 | /data2/data/github/geotools/cleanse | /data2/data/github/geotools/plot-motion 2>/dev/null | ./geo2geojson | /data2/data/github/tippecanoe/tippecanoe -pf -pl -po -z13 -r1.5 -f -o geotaggers1.5pflo.mbtiles
 
 while (<>) {
 	chomp;
