@@ -30,3 +30,11 @@ The quick walkthrough:
 
 Once you have the .mbtiles file of vector tiles, you can [upload it to Mapbox](https://www.mapbox.com/uploads/)
 and then use Mapbox Studio to apply a style like the one in [style.mss](geotaggers.tm2/style.mss).
+
+The key things that the style is doing are:
+
+  * Increasing the line thickness at zoom levels higher than the base (and also again at especially low zoom levels because the few dense spots get hard to see)
+  * Using lighter and lighter opacities for points that are further and further away
+  * Coloring the lines according to the travel speed
+
+It also contains a style for Mapbox Streets for the base map, doing similar things with line thickness.
