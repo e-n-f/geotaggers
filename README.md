@@ -26,3 +26,7 @@ The quick walkthrough:
    * <code>-z13</code>: Use zoom level 13 as the base
    * <code>-r1.5</code>: Retain 1/1.5 of the features at each lower zoom instead of the usual 1/2.5
    * <code>-f</code>: Force overwrite of old .mbtiles file
+   * <code>-o whatever.mbtiles</code>: Name the output file that the tiles are written into
+
+Once you have the .mbtiles file of vector tiles, you can [upload it to Mapbox](https://www.mapbox.com/uploads/)
+and then use Mapbox Studio to apply a style like the one in [style.mss](geotaggers.tm2/style.mss).
