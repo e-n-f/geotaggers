@@ -38,3 +38,14 @@ The key things that the style is doing are:
   * Coloring the lines according to the travel speed
 
 It also contains a style for Mapbox Streets for the base map, doing similar things with line thickness.
+
+2017 Revision
+-------------
+
+```
+cat grand-unified.list.sort.20170615 |
+/data2/data/github/geotools/cleanse |
+/data2/data/github/geotools/plot-motion 2>/dev/null |
+./geo2geojson |
+/data2/data/github/tippecanoe/tippecanoe -ae -zg -pf --drop-fraction-as-needed -f -o geotaggers20170615.mbtiles
+```
